@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:DesignPattern"
         mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="525">
-    <Grid>
-        
-    </Grid>
+    <StackPanel>
+        <Button Content="StrategyTest" Click="StrategyTest_Click" />
+    </StackPanel>
 </Window>
