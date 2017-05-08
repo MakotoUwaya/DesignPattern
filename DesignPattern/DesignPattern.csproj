@@ -94,6 +94,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Observer\Observer.csproj">
+      <Project>{9bb59efa-1988-4bf2-b7fc-544b489feb0d}</Project>
+      <Name>Observer</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Strategy\Strategy.csproj">
       <Project>{64d1b0f7-1a35-41ec-a389-4a8b3d41a34e}</Project>
       <Name>Strategy</Name>

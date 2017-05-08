@@ -7,6 +7,9 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="525">
     <StackPanel>
-        <Button Content="StrategyTest" Click="StrategyTest_Click" />
+        <Button Content="StrategyTest" Click="StrategyTest_Click" 
+                Margin="10,5"/>
+        <Button Content="ObserverTest" Click="ObserverTest_Click" 
+                Margin="10,5"/>
     </StackPanel>
 </Window>
