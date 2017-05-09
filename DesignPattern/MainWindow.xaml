@@ -11,5 +11,7 @@
                 Margin="10,5"/>
         <Button Content="ObserverTest" Click="ObserverTest_Click" 
                 Margin="10,5"/>
+        <Button Content="DecoratorTest" Click="DecoratorTest_Click" 
+                Margin="10,5"/>
     </StackPanel>
 </Window>

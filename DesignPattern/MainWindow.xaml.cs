@@ -1,6 +1,10 @@
 ﻿using System.Windows;
 using Strategy.Model;
 using Observer.Model;
+using Decorator;
+using Decorator.Drink;
+using Decorator.Topping;
+using System;
 
 namespace DesignPattern
 {
@@ -49,5 +53,29 @@ namespace DesignPattern
             unsbscriber3.Dispose();
             unsbscriber4.Dispose();
         }
+
+        private void DecoratorTest_Click(object sender, RoutedEventArgs e)
+        {
+            Beverage beverage1 = new Espresso();
+            PrintBeverage(beverage1);
+
+            Beverage beverage2 = new DarkRoast();
+            beverage2 = new Mocha(beverage2);
+            beverage2 = new Mocha(beverage2);
+            beverage2 = new Whip(beverage2);
+            PrintBeverage(beverage2);
+
+            Beverage beverage3 = new HouseBlend();
+            beverage3 = new Soy(beverage3);
+            beverage3 = new Mocha(beverage3);
+            beverage3 = new Whip(beverage3);
+            PrintBeverage(beverage3);
+        }
+
+        private void PrintBeverage(Beverage beverage)
+        {
+            Console.WriteLine($"{beverage.GetDescription()} ${beverage.Cost()}");
+        }
+
     }
 }
