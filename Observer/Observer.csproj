@@ -57,6 +57,7 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FeedSample\Rss.cs" />
     <Compile Include="Model\Observer.cs" />
     <Compile Include="Model\Subject.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
