@@ -40,17 +40,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ChicagoStylePizzaStore.cs" />
+    <Compile Include="Model\PIzza\Chicago\ChicagoStyleClamPizza.cs" />
+    <Compile Include="Model\PIzza\Chicago\ChicagoStyleVeggiePizza.cs" />
+    <Compile Include="Model\PIzza\Chicago\ChicagoStyleCheesePizza.cs" />
+    <Compile Include="Model\PIzza\Chicago\ChicagoStylePepperoniPizza.cs" />
+    <Compile Include="Model\PIzza\NY\NYStylePepperoniPizza.cs" />
+    <Compile Include="Model\PIzza\NY\NYStyleClamPizza.cs" />
+    <Compile Include="Model\PIzza\NY\NYStyleVeggiePizza.cs" />
+    <Compile Include="Model\PIzza\NY\NYStyleCheesePizza.cs" />
     <Compile Include="NYStylePizzaStore.cs" />
     <Compile Include="PizzaStoreBase.cs" />
     <Compile Include="Simple\CheesePizza.cs" />
-    <Compile Include="Simple\IPizza.cs" />
+    <Compile Include="PizzaBase.cs" />
     <Compile Include="Simple\PizzaStore.cs" />
     <Compile Include="Simple\PizzaFactory.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Model\PIzza\Chicago\" />
-    <Folder Include="Model\PIzza\NY\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

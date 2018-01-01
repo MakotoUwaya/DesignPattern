@@ -20,7 +20,7 @@ namespace Factory.Simple
             this.factory = factory;
         }
 
-        public IPizza OrderPizza(string pizzaType)
+        public PizzaBase OrderPizza(string pizzaType)
         {          
             var pizza = this.factory.CreatePizza(pizzaType);
             pizza.Prepare();

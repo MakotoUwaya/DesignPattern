@@ -8,9 +8,9 @@ namespace Factory.Simple
 {
     public class PizzaFactory
     {
-        public IPizza CreatePizza(string pizzaType)
+        public PizzaBase CreatePizza(string pizzaType)
         {
-            IPizza pizza = null;
+            PizzaBase pizza = null;
 
             switch (pizzaType)
             {

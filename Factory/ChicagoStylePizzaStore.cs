@@ -1,21 +1,21 @@
-﻿using Factory.Model.PIzza.NY;
+﻿using Factory.Model.PIzza.Chicago;
 
 namespace Factory
 {
-    public class NYStylePizzaStore : PizzaStoreBase
+    public class ChicagoStylePizzaStore : PizzaStoreBase
     {
         protected override PizzaBase CreatePizza(string pizzaType)
         {
             switch (pizzaType.ToLower())
             {
                 case "cheese":
-                    return new NYStyleCheesePizza();
+                    return new ChicagoStyleCheesePizza();
                 case "veggie":
-                    return new NYStyleVeggiePizza();
+                    return new ChicagoStyleVeggiePizza();
                 case "clam":
-                    return new NYStyleClamPizza();
+                    return new ChicagoStyleClamPizza();
                 case "pepperroni":
-                    return new NYStylePepperoniPizza();
+                    return new ChicagoStylePepperoniPizza();
                 default:
                     return null;
             }

@@ -4,11 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Factory.Simple
+namespace Factory
 {
     public abstract class PizzaStoreBase
     {
-        public IPizza OrderPizza(string pizzaType)
+        public PizzaBase OrderPizza(string pizzaType)
         {
             var pizza = this.CreatePizza(pizzaType);
             pizza.Prepare();
@@ -19,7 +19,7 @@ namespace Factory.Simple
             return pizza;
         }
 
-        protected abstract IPizza CreatePizza(string pizzaType);
+        protected abstract PizzaBase CreatePizza(string pizzaType);
 
     }
 }

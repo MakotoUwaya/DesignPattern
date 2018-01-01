@@ -1,11 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace Factory.Simple
+namespace Factory.Model.PIzza.NY
 {
-    public class CheesePizza : PizzaBase
+    public class NYStylePepperoniPizza : PizzaBase
     {
-        public override string Name => "CheesePizza";
+        public override string Name => "NYStylePepperoniPizza";
 
         public override string Dough => throw new NotImplementedException();
 
