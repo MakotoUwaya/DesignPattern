@@ -7,10 +7,9 @@ namespace Factory.Model.PIzza.Chicago
     {
         public override string Name => "シカゴスタイルのディープディッシュチーズピザ";
 
-        public override string Dough => "極厚クラスト生地";
+        public ChicagoStyleCheesePizza(IPizzaIngredientFactory pizzaIngredientFactory) : base(pizzaIngredientFactory)
+        {
 
-        public override string Sauce => "プラムトマトソース";
-
-        public override IEnumerable<string> Toppings => new[] { "刻んだモッツアレラチーズ" };
+        }
     }
 }

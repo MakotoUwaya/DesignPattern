@@ -7,10 +7,9 @@ namespace Factory.Simple
     {
         public override string Name => "CheesePizza";
 
-        public override string Dough => throw new NotImplementedException();
+        public CheesePizza(IPizzaIngredientFactory pizzaIngredientFactory) : base(pizzaIngredientFactory)
+        {
+        }
 
-        public override string Sauce => throw new NotImplementedException();
-
-        public override IEnumerable<string> Toppings => throw new NotImplementedException();
     }
 }

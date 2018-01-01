@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Factory.Model.Ingredient;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -15,7 +16,7 @@ namespace Factory.Simple
             switch (pizzaType)
             {
                 case "チーズ":
-                    pizza = new CheesePizza();
+                    pizza = new CheesePizza(new NYPizzaIngredientFactory());
                     break;
 
                 default:

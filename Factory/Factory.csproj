@@ -41,6 +41,21 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ChicagoStylePizzaStore.cs" />
+    <Compile Include="IPizzaIngredientFactory.cs" />
+    <Compile Include="Model\Ingredient\NYApple.cs" />
+    <Compile Include="Model\Ingredient\NYEggplant.cs" />
+    <Compile Include="Model\Ingredient\IVeggies.cs" />
+    <Compile Include="Model\Ingredient\IPepperoni.cs" />
+    <Compile Include="Model\Ingredient\IClams.cs" />
+    <Compile Include="Model\Ingredient\ICheese.cs" />
+    <Compile Include="Model\Ingredient\ISouce.cs" />
+    <Compile Include="Model\Ingredient\IDough.cs" />
+    <Compile Include="Model\Ingredient\NYCheese.cs" />
+    <Compile Include="Model\Ingredient\NYClam.cs" />
+    <Compile Include="Model\Ingredient\NYDough.cs" />
+    <Compile Include="Model\Ingredient\NYNYPepperoni.cs" />
+    <Compile Include="Model\Ingredient\NYPizzaIngredientFactory.cs" />
+    <Compile Include="Model\Ingredient\NYSouce.cs" />
     <Compile Include="Model\PIzza\Chicago\ChicagoStyleClamPizza.cs" />
     <Compile Include="Model\PIzza\Chicago\ChicagoStyleVeggiePizza.cs" />
     <Compile Include="Model\PIzza\Chicago\ChicagoStyleCheesePizza.cs" />

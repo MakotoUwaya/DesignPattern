@@ -6,11 +6,9 @@ namespace Factory.Model.PIzza.Chicago
     public class ChicagoStylePepperoniPizza : PizzaBase
     {
         public override string Name => "ChicagoStylePepperoniPizza";
+        public ChicagoStylePepperoniPizza(IPizzaIngredientFactory pizzaIngredientFactory) : base(pizzaIngredientFactory)
+        {
 
-        public override string Dough => throw new NotImplementedException();
-
-        public override string Sauce => throw new NotImplementedException();
-
-        public override IEnumerable<string> Toppings => throw new NotImplementedException();
+        }
     }
 }
