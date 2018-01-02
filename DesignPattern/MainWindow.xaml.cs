@@ -12,6 +12,7 @@ using Decorator.Topping;
 using Factory;
 using Factory.Model.Ingredient;
 using Singleton;
+using Command;
 
 namespace DesignPattern
 {
@@ -111,5 +112,31 @@ namespace DesignPattern
             instance1.Drain();
             Console.WriteLine($"I1:{instance1.ToString()} I2:{instance2.ToString()}");
         }
+
+        private void Command_Click(object sender, RoutedEventArgs e)
+        {
+            var remoteControl = new RemoteControl();
+            var light = new Light();
+            var garageDoor = new GarageDoor();
+            var stereo = new Stereo();
+
+            var lightOn = new LightOnCommand(light);
+            var lightOff = new LightOffCommand(light);
+            var garageOpen = new GarageDoorOpenCommand(garageDoor);
+            var garageClose = new GarageDoorCloseCommand(garageDoor);
+            var stereoOn = new StereoOnWithCdCommand(stereo);
+            var stereoOff = new StereoOffWithCdCommand(stereo);
+
+            remoteControl.SetCommand(0, lightOn, lightOff);
+            remoteControl.SetCommand(1, garageOpen, garageClose);
+            remoteControl.SetCommand(2, stereoOn, stereoOff);
+
+            remoteControl.SetCommand(6, 
+                new MacroCommand(new ICommand[] { lightOn, garageOpen, stereoOn }), 
+                new MacroCommand(new ICommand[] { lightOff, garageClose, stereoOff }));
+
+            Console.WriteLine(remoteControl.ToString());
+        }
+
     }
 }
