@@ -15,5 +15,8 @@
                 Margin="10,5"/>
         <Button Content="FactoryTest" Click="FactoryTest_Click" 
                 Margin="10,5"/>
+        <Button Content="SingletonTest" Click="Singleton_Click" 
+                Margin="10,5"/>
+
     </StackPanel>
 </Window>
