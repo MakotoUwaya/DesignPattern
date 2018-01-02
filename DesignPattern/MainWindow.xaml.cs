@@ -13,6 +13,7 @@ using Factory;
 using Factory.Model.Ingredient;
 using Singleton;
 using Command;
+using Facade;
 
 namespace DesignPattern
 {
@@ -155,6 +156,21 @@ namespace DesignPattern
         {
             duck.Quack();
             duck.Fly();
+        }
+
+        private void Facade_Click(object sender, RoutedEventArgs e)
+        {
+            var theaterLights = new TheaterLights();
+            var screen = new Screen();
+            var popcornPopper = new PopcornPopper();
+            var projector = new Projector();
+            var dvdPlayer = new DvdPlayer(projector);
+            var tuner = new Tuner();
+            var cdPlayer = new CdPlayer();
+            var amplifier = new Amplifier(tuner, cdPlayer, dvdPlayer);
+
+            var homeTheaterFacade = new HomeTheaterFacade(amplifier, tuner, cdPlayer, dvdPlayer, theaterLights, screen, popcornPopper);
+            homeTheaterFacade.WatchMovie();
         }
     }
 }

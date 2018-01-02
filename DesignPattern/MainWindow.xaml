@@ -21,5 +21,7 @@
                 Margin="10,5"/>
         <Button Content="AdapterTest" Click="Adapter_Click" 
                 Margin="10,5"/>
+        <Button Content="FacadeTest" Click="Facade_Click" 
+                Margin="10,5"/>
     </StackPanel>
 </Window>
