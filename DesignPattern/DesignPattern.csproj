@@ -94,6 +94,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Command\Command.csproj">
+      <Project>{2268f7a3-dc41-408d-817f-1b983bd07616}</Project>
+      <Name>Command</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Decorator\Decorator.csproj">
       <Project>{2bf36d01-ffcb-46ec-8457-1e68d50bbb1c}</Project>
       <Name>Decorator</Name>
