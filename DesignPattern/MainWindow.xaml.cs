@@ -11,6 +11,7 @@ using Decorator.Topping;
 
 using Factory;
 using Factory.Model.Ingredient;
+using Singleton;
 
 namespace DesignPattern
 {
@@ -96,6 +97,19 @@ namespace DesignPattern
             Console.WriteLine();
             var pizza2 = chicagopizzaStore.OrderPizza("cheese");
             Console.WriteLine($"2つ目の注文は {pizza2.Name} です");
+        }
+
+        private void Singleton_Click(object sender, RoutedEventArgs e)
+        {
+            var instance1 = ChocolateBoiler.Instance;
+            var instance2 = ChocolateBoiler.Instance;
+
+            instance1.Fill();
+            Console.WriteLine($"I1:{instance1.ToString()} I2:{instance2.ToString()}");
+            instance2.Boil();
+            Console.WriteLine($"I1:{instance1.ToString()} I2:{instance2.ToString()}");
+            instance1.Drain();
+            Console.WriteLine($"I1:{instance1.ToString()} I2:{instance2.ToString()}");
         }
     }
 }

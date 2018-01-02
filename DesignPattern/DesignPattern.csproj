@@ -106,6 +106,10 @@
       <Project>{9bb59efa-1988-4bf2-b7fc-544b489feb0d}</Project>
       <Name>Observer</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Singleton\Singleton.csproj">
+      <Project>{41f215c2-d764-4fd5-a671-3e19b9d4b7b7}</Project>
+      <Name>Singleton</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Strategy\Strategy.csproj">
       <Project>{64d1b0f7-1a35-41ec-a389-4a8b3d41a34e}</Project>
       <Name>Strategy</Name>
