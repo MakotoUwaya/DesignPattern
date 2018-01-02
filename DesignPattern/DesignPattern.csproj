@@ -94,6 +94,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Adaptor\Adaptor.csproj">
+      <Project>{1d1bc193-3452-41ab-b2fa-b0ebfdc79527}</Project>
+      <Name>Adaptor</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Command\Command.csproj">
       <Project>{2268f7a3-dc41-408d-817f-1b983bd07616}</Project>
       <Name>Command</Name>
