@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{356B00A1-4ACB-4A86-8954-A2F62DF1DEA9}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Factory</RootNamespace>
+    <AssemblyName>Factory</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ChicagoStylePizzaStore.cs" />
+    <Compile Include="IPizzaIngredientFactory.cs" />
+    <Compile Include="Model\Ingredient\NYApple.cs" />
+    <Compile Include="Model\Ingredient\NYEggplant.cs" />
+    <Compile Include="Model\Ingredient\IVeggies.cs" />
+    <Compile Include="Model\Ingredient\IPepperoni.cs" />
+    <Compile Include="Model\Ingredient\IClams.cs" />
+    <Compile Include="Model\Ingredient\ICheese.cs" />
+    <Compile Include="Model\Ingredient\ISouce.cs" />
+    <Compile Include="Model\Ingredient\IDough.cs" />
+    <Compile Include="Model\Ingredient\NYCheese.cs" />
+    <Compile Include="Model\Ingredient\NYClam.cs" />
+    <Compile Include="Model\Ingredient\NYDough.cs" />
+    <Compile Include="Model\Ingredient\NYNYPepperoni.cs" />
+    <Compile Include="Model\Ingredient\NYPizzaIngredientFactory.cs" />
+    <Compile Include="Model\Ingredient\NYSouce.cs" />
+    <Compile Include="Model\PIzza\Chicago\ChicagoStyleClamPizza.cs" />
+    <Compile Include="Model\PIzza\Chicago\ChicagoStyleVeggiePizza.cs" />
+    <Compile Include="Model\PIzza\Chicago\ChicagoStyleCheesePizza.cs" />
+    <Compile Include="Model\PIzza\Chicago\ChicagoStylePepperoniPizza.cs" />
+    <Compile Include="Model\PIzza\NY\NYStylePepperoniPizza.cs" />
+    <Compile Include="Model\PIzza\NY\NYStyleClamPizza.cs" />
+    <Compile Include="Model\PIzza\NY\NYStyleVeggiePizza.cs" />
+    <Compile Include="Model\PIzza\NY\NYStyleCheesePizza.cs" />
+    <Compile Include="NYStylePizzaStore.cs" />
+    <Compile Include="PizzaStoreBase.cs" />
+    <Compile Include="Simple\CheesePizza.cs" />
+    <Compile Include="PizzaBase.cs" />
+    <Compile Include="Simple\PizzaStore.cs" />
+    <Compile Include="Simple\PizzaFactory.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
