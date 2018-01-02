@@ -138,5 +138,23 @@ namespace DesignPattern
             Console.WriteLine(remoteControl.ToString());
         }
 
+        private void Adapter_Click(object sender, RoutedEventArgs e)
+        {
+            var duck = new Adaptor.MallardDuck();
+            var turkey = new Adaptor.WildTurkey();
+            var turkeyAdapter = new Adaptor.TurkeyAdapter(turkey);
+
+            Console.WriteLine("Duck の出力------");
+            this.TestDuck(duck);
+
+            Console.WriteLine("Turkey の出力------");
+            this.TestDuck(turkeyAdapter);            
+        }
+
+        private void TestDuck(Adaptor.IDuck duck)
+        {
+            duck.Quack();
+            duck.Fly();
+        }
     }
 }
