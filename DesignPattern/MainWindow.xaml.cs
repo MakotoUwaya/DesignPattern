@@ -23,6 +23,8 @@ using TemplateMethod;
 
 using Iterator;
 
+using State;
+
 namespace DesignPattern
 {
     /// <summary>
@@ -183,10 +185,12 @@ namespace DesignPattern
 
         private void TemplateMethod_Click(object sender, RoutedEventArgs e)
         {
-            var caffeineBevarages = new List<CaffeineBeverage>();
-            caffeineBevarages.Add(new Tea());
-            caffeineBevarages.Add(new Coffee(true));
-            caffeineBevarages.Add(new Coffee(false));
+            var caffeineBevarages = new List<CaffeineBeverage>
+            {
+                new Tea(),
+                new Coffee(true),
+                new Coffee(false),
+            };
 
             foreach (var bevarage in caffeineBevarages)
             {
@@ -210,6 +214,44 @@ namespace DesignPattern
             waitress.PrintMenu();
             waitress.PrintVegetarianMenu();
             waitress.PrintValuePriceMenu();
+        }
+
+        private void State_Click(object sender, RoutedEventArgs e)
+        {
+            var gumballMachine = new GumballMachine("2004", 5);
+            Console.WriteLine(gumballMachine);
+            gumballMachine.InsertQuarter();
+            gumballMachine.TurnCrank();
+
+            Console.WriteLine();
+            Console.WriteLine(gumballMachine);
+            gumballMachine.InsertQuarter();
+            gumballMachine.EjectQuarter();
+            gumballMachine.TurnCrank();
+
+            Console.WriteLine();
+            Console.WriteLine(gumballMachine);
+            gumballMachine.InsertQuarter();
+            gumballMachine.TurnCrank();
+            gumballMachine.InsertQuarter();
+            gumballMachine.TurnCrank();
+            gumballMachine.EjectQuarter();
+
+            Console.WriteLine();
+            Console.WriteLine(gumballMachine);
+            gumballMachine.InsertQuarter();
+            gumballMachine.InsertQuarter();
+            gumballMachine.TurnCrank();
+            gumballMachine.InsertQuarter();
+            gumballMachine.TurnCrank();
+            gumballMachine.InsertQuarter();
+            gumballMachine.TurnCrank();
+
+            Console.WriteLine();
+            Console.WriteLine(gumballMachine);
+            gumballMachine.Fill(1);
+            gumballMachine.InsertQuarter();
+            gumballMachine.TurnCrank();
         }
     }
 }
