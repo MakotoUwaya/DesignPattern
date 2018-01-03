@@ -5,35 +5,21 @@ namespace Iterator
 {
     public class Waitress
     {
-        private IEnumerable<IMenu> menuList;
+        private IEnumerable<MenuComponentBase> menus;
 
-        public Waitress(IMenu pancakeHouseMenu, IMenu dinerMenu)
+        public Waitress(IEnumerable<MenuComponentBase> menus)
         {
-            this.menuList = new List<IMenu>
-            {
-                pancakeHouseMenu,
-                dinerMenu,
-            };
+            this.menus = menus;
         }
 
         public void PrintMenu()
         {
             Console.WriteLine("メニュー");
-            Console.WriteLine("----------");
-            foreach (var menu in this.menuList)
+            Console.WriteLine("-----------");
+            foreach (var menu in this.menus)
             {
-                this.PrintMenu(menu.GetMenuItems());
-            }
-        }
-
-        private void PrintMenu(IEnumerable<MenuItem> menuItems)
-        {
-            foreach (var item in menuItems)
-            {
-                Console.WriteLine($"{item.Name}、{item.Price} -- {item.Description}");
+                menu.Print();
             }
         }
     }
-
-
 }

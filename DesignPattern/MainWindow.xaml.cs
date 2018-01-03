@@ -191,10 +191,17 @@ namespace DesignPattern
 
         private void Iterator_Click(object sender, RoutedEventArgs e)
         {
-            var pancakeMenu = new PancakeHouseMenu();
-            var dinerMenu = new DinerMenu();
+            MenuComponentBase pancakeMenu = new PancakeHouseMenu();
+            MenuComponentBase dinerMenu = new DinerMenu();
+            MenuComponentBase cafeMenu = new Menu("カフェメニュー", "夕食", new List<MenuComponentBase> {
+                new MenuItem("パスタ","マリナラソースのかかったスパゲティとサワードパン", true, 3.89),
+            });
+            MenuComponentBase dessertMenu = new Menu("デザートメニュー", "もちろんデザート！", new List<MenuComponentBase> {
+                new MenuItem("アップルパイ", "バニラアイスクリームをのせたフレーク状生地のアップルパイ", true, 1.59),
+            });
+            dinerMenu.Add(dessertMenu);
 
-            var waitress = new Waitress(pancakeMenu, dinerMenu);
+            var waitress = new Waitress(new[] { pancakeMenu, dinerMenu, cafeMenu });
             waitress.PrintMenu();
         }
     }
