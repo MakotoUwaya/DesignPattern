@@ -10,6 +10,7 @@ namespace State
         public IState NoQuarterState { get; private set; }
         public IState HasQuarterState { get; private set; }
         public IState SoldState { get; private set; }
+        public IState WinnerState { get; private set; }
 
         public IState CurrentState { get; private set; }
         public int BallCount { get; private set; } = 0;
@@ -21,6 +22,7 @@ namespace State
             this.NoQuarterState = new NoQuarterState(this);
             this.HasQuarterState = new HasQuarterState(this);
             this.SoldState = new SoldState(this);
+            this.WinnerState = new WinnerState(this);
 
             this.BallCount = numberGumballs;
             if (0 < this.BallCount)
@@ -63,6 +65,7 @@ namespace State
 
         public void Fill(int ballCount)
         {
+            Console.WriteLine($"ガムボールを補充しました:{this.BallCount}→{this.BallCount + ballCount}");
             this.BallCount += ballCount;
             if (this.CurrentState is SoldOutState && 0 < this.BallCount)
             {
