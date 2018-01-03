@@ -14,6 +14,8 @@ using Factory.Model.Ingredient;
 using Singleton;
 using Command;
 using Facade;
+using TemplateMethod;
+using System.Collections.Generic;
 
 namespace DesignPattern
 {
@@ -171,6 +173,19 @@ namespace DesignPattern
 
             var homeTheaterFacade = new HomeTheaterFacade(amplifier, tuner, cdPlayer, dvdPlayer, theaterLights, screen, popcornPopper);
             homeTheaterFacade.WatchMovie();
+        }
+
+        private void TemplateMethod_Click(object sender, RoutedEventArgs e)
+        {
+            var caffeineBevarages = new List<CaffeineBeverage>();
+            caffeineBevarages.Add(new Tea());
+            caffeineBevarages.Add(new Coffee(true));
+            caffeineBevarages.Add(new Coffee(false));
+
+            foreach (var bevarage in caffeineBevarages)
+            {
+                bevarage.PrepareRecipe();
+            }
         }
     }
 }
