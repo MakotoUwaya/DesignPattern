@@ -14,11 +14,34 @@ namespace Iterator
 
         public void PrintMenu()
         {
+            Console.WriteLine();
             Console.WriteLine("メニュー");
             Console.WriteLine("-----------");
             foreach (var menu in this.menus)
             {
                 menu.Print();
+            }
+        }
+
+        public void PrintVegetarianMenu()
+        {
+            Console.WriteLine();
+            Console.WriteLine("菜食メニュー");
+            Console.WriteLine("-----------");
+            foreach (var menu in this.menus)
+            {
+                menu.ConditionalPrint(m => m.Vegetarian);
+            }
+        }
+
+        public void PrintValuePriceMenu()
+        {
+            Console.WriteLine();
+            Console.WriteLine("安価なメニュー");
+            Console.WriteLine("-----------");
+            foreach (var menu in this.menus)
+            {
+                menu.ConditionalPrint(m => m.Price < 2.0);
             }
         }
     }

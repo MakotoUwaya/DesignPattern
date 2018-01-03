@@ -203,6 +203,8 @@ namespace DesignPattern
 
             var waitress = new Waitress(new[] { pancakeMenu, dinerMenu, cafeMenu });
             waitress.PrintMenu();
+            waitress.PrintVegetarianMenu();
+            waitress.PrintValuePriceMenu();
         }
     }
 }

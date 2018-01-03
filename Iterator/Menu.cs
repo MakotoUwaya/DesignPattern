@@ -59,5 +59,13 @@ namespace Iterator
                 item.Print();
             }
         }
+
+        public override void ConditionalPrint(Func<MenuItem, bool> condition)
+        {
+            foreach (var item in this.menuItems)
+            {
+                item.ConditionalPrint(condition);
+            }
+        }
     }
 }
