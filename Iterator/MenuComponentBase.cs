@@ -10,6 +10,10 @@ namespace Iterator
         public abstract bool Vegetarian { get; }
 
         public abstract void Print();
+
+        public abstract void ConditionalPrint(Func<MenuItem, bool> condition);
+
+
         public virtual void Add(MenuComponentBase menuComponent)
         {
             throw new NotSupportedException();

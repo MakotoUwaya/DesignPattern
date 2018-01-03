@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Windows;
 
 using Strategy.Model;
@@ -11,11 +12,15 @@ using Decorator.Topping;
 
 using Factory;
 using Factory.Model.Ingredient;
+
 using Singleton;
+
 using Command;
+
 using Facade;
+
 using TemplateMethod;
-using System.Collections.Generic;
+
 using Iterator;
 
 namespace DesignPattern
@@ -203,6 +208,8 @@ namespace DesignPattern
 
             var waitress = new Waitress(new[] { pancakeMenu, dinerMenu, cafeMenu });
             waitress.PrintMenu();
+            waitress.PrintVegetarianMenu();
+            waitress.PrintValuePriceMenu();
         }
     }
 }

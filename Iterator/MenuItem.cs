@@ -30,6 +30,15 @@ namespace Iterator
             Console.WriteLine($"\t{this.Name}{this.VegetarianMark()}、{this.Price}\n\t-- {this.Description}");
         }
 
+        public override void ConditionalPrint(Func<MenuItem, bool> condition)
+        {
+            if (condition == null || !condition(this))
+            {
+                return;
+            }
+            this.Print();
+        }
+
         private string VegetarianMark()
         {
             return this.Vegetarian ? "(v)" : string.Empty;
