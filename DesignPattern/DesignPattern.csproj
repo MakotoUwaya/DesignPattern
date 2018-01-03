@@ -126,6 +126,10 @@
       <Project>{41f215c2-d764-4fd5-a671-3e19b9d4b7b7}</Project>
       <Name>Singleton</Name>
     </ProjectReference>
+    <ProjectReference Include="..\State\State.csproj">
+      <Project>{0ee9c9b9-7bf8-4f3d-9dd5-c654ae02293e}</Project>
+      <Name>State</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Strategy\Strategy.csproj">
       <Project>{64d1b0f7-1a35-41ec-a389-4a8b3d41a34e}</Project>
       <Name>Strategy</Name>

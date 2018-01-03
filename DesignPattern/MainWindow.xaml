@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:DesignPattern"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
+        Title="MainWindow" Height="400" Width="350">
     <StackPanel>
         <Button Content="StrategyTest" Click="StrategyTest_Click" 
                 Margin="10,5"/>
@@ -26,6 +26,8 @@
         <Button Content="TemplateMethodTest" Click="TemplateMethod_Click" 
                 Margin="10,5"/>
         <Button Content="IteratorTest" Click="Iterator_Click" 
+                Margin="10,5"/>
+        <Button Content="StateTest" Click="State_Click" 
                 Margin="10,5"/>
     </StackPanel>
 </Window>
