@@ -46,6 +46,7 @@
     <Compile Include="NoQuarterState.cs" />
     <Compile Include="HasQuarterState.cs" />
     <Compile Include="SoldOutState.cs" />
+    <Compile Include="WinnerState.cs" />
     <Compile Include="SoldState.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
