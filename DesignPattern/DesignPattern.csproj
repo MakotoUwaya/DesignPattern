@@ -114,6 +114,10 @@
       <Project>{356b00a1-4acb-4a86-8954-a2f62df1dea9}</Project>
       <Name>Factory</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Iterator\Iterator.csproj">
+      <Project>{4e37cfb5-2737-4b83-9e2c-fa358d82a25c}</Project>
+      <Name>Iterator</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Observer\Observer.csproj">
       <Project>{9bb59efa-1988-4bf2-b7fc-544b489feb0d}</Project>
       <Name>Observer</Name>
