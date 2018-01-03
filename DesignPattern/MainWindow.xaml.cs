@@ -16,6 +16,7 @@ using Command;
 using Facade;
 using TemplateMethod;
 using System.Collections.Generic;
+using Iterator;
 
 namespace DesignPattern
 {
@@ -186,6 +187,15 @@ namespace DesignPattern
             {
                 bevarage.PrepareRecipe();
             }
+        }
+
+        private void Iterator_Click(object sender, RoutedEventArgs e)
+        {
+            var pancakeMenu = new PancakeHouseMenu();
+            var dinerMenu = new DinerMenu();
+
+            var waitress = new Waitress(pancakeMenu, dinerMenu);
+            waitress.PrintMenu();
         }
     }
 }
